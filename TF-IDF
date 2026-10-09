@@ -1,0 +1,11 @@
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+vectorizer_tfidf = TfidfVectorizer()
+matrice_tfidf = vectorizer_tfidf.fit_transform(phrases)
+
+print("Liste des mots :")
+print(vectorizer_tfidf.get_feature_names_out())
+
+print("\nMatrice TF-IDF :")
+print(matrice_tfidf.toarray())

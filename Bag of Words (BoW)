@@ -1,0 +1,17 @@
+
+from sklearn.feature_extraction.text import CountVectorizer
+
+phrases = [
+    "Le football est un sport populaire",
+    "Le cinéma est un art populaire",
+    "Le football et le cinéma sont populaires"
+]
+
+vectorizer = CountVectorizer()
+matrice = vectorizer.fit_transform(phrases)
+
+print("Liste des mots :")
+print(vectorizer.get_feature_names_out())
+
+print("\nMatrice Bag of Words :")
+print(matrice.toarray())
